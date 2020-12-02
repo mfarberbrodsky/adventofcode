@@ -1,6 +1,6 @@
 # Advent of Code 2020
 
-This repository hosts my solutions to AoC 2020, using C++.
+This repository hosts my solutions to [Advent of Code 2020](https://adventofcode.com/2020), using C++.
 
 I'm not trying for the leaderboard. Instead, my goal this year is to get my hands dirty with C++ and become comfortable with its coding practices, writing readable, clear and optimal code (with respect to time complexity).
 
