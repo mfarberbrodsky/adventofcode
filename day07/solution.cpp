@@ -42,6 +42,8 @@ unordered_map<string, vector<bag>> parse_input(string filename)
         rules[first_bag] = contained_bags;
     }
 
+    input_file.close();
+
     return rules;
 }
 
