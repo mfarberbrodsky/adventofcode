@@ -34,7 +34,7 @@ vector<vector<string>> parse_input(string filename)
 }
 
 // Part I Solution
-int sum_any_questions(vector<vector<string>> groups)
+int sum_any_questions(vector<vector<string>> &groups)
 {
     int sum = 0;
     for (vector<string> group : groups)
@@ -61,7 +61,7 @@ int sum_any_questions(vector<vector<string>> groups)
 }
 
 // Part II Solution
-int sum_all_questions(vector<vector<string>> groups)
+int sum_all_questions(vector<vector<string>> &groups)
 {
     int sum = 0;
     for (vector<string> group : groups)

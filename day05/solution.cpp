@@ -60,7 +60,7 @@ int seat_id(string seat)
 }
 
 // Part I Solution
-int highest_seat_id(vector<string> seats)
+int highest_seat_id(vector<string> &seats)
 {
     int max = 0;
     for (string seat : seats)
@@ -75,7 +75,7 @@ int highest_seat_id(vector<string> seats)
 }
 
 // Part II Solution
-int missing_seat_id(vector<string> seats)
+int missing_seat_id(vector<string> &seats)
 {
     bool ids[1024] = {}; // there are 128*8=1024 possible seats
 
