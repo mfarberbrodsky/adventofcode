@@ -5,7 +5,6 @@
 
 #define MAX_SIZE 1024
 #define MAX_LINE 8
-#define RADIAN_RATIO 3.1415926535 / 180
 
 typedef struct
 {
@@ -24,10 +23,10 @@ typedef struct
 
 int parse_input(char *filename, instruction *insts)
 {
+    int n = 0;
+
     FILE *input_file = fopen(filename, "r");
     char line[MAX_LINE];
-
-    int n = 0;
     while (fgets(line, MAX_SIZE, input_file) != NULL)
     {
         insts[n].action = line[0];
