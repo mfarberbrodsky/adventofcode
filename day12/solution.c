@@ -3,8 +3,8 @@
 #include <assert.h>
 #include <complex.h>
 
-#define MAX_SIZE 1024
-#define MAX_LINE 8
+#define MAX_INSTRUCTIONS 1024
+#define MAX_LINE_LENGTH 8
 
 typedef struct
 {
@@ -26,8 +26,8 @@ int parse_input(char *filename, instruction *insts)
     int n = 0;
 
     FILE *input_file = fopen(filename, "r");
-    char line[MAX_LINE];
-    while (fgets(line, MAX_SIZE, input_file) != NULL)
+    char line[MAX_LINE_LENGTH];
+    while (fgets(line, MAX_LINE_LENGTH, input_file) != NULL)
     {
         insts[n].action = line[0];
         insts[n].value = atoi(line + 1);
@@ -132,12 +132,12 @@ int ship_distance_with_waypoint(instruction *insts, int length)
 
 int main()
 {
-    instruction example_insts[MAX_SIZE];
+    instruction example_insts[MAX_INSTRUCTIONS];
     int example_length = parse_input("example.txt", example_insts);
     assert(ship_distance(example_insts, example_length) == 25);
     assert(ship_distance_with_waypoint(example_insts, example_length) == 286);
 
-    instruction insts[MAX_SIZE];
+    instruction insts[MAX_INSTRUCTIONS];
     int length = parse_input("input.txt", insts);
     printf("%d\n", ship_distance(insts, length));
     printf("%d\n", ship_distance_with_waypoint(insts, length));
